@@ -27,11 +27,18 @@ export const cards = [
 
 
     {
-
         id: 4,
         title: "card4",
         imageUrl: "https://downloader.disk.yandex.ru/preview/1df9c260e00f945c8715e9df9a93d6564dd0fbcd750fd488e5a05b483d4f5942/690e2ed2/L38vJlvUKBQxj-slNfGqcOu7PXHpBHgnMsQ50wvqvtfSUqvQ-aQWKROBRwso73qRzeMm7fWtSTztTg-0MBScPQ%3D%3D?uid=0&filename=brunch.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=2048x2048",
         description: "описание вкусный завтрак в городе"
+    },
+
+
+     {
+        id: 5,
+        title: "card5",
+        imageUrl: "https://images.wallpaperscraft.ru/image/single/kofe_kruzhka_stul_124443_300x168.jpg",
+        description: "описание вкусный кофе"
     }
 
 

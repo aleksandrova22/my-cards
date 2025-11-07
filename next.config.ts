@@ -25,6 +25,10 @@ images: {
                    protocol: 'https',
                   hostname: 'downloader.disk.yandex.net',
                },
+               {
+                protocol: 'https',
+                hostname: 'downloader.disk.yandex.net', // Добавьте это!
+            },
            ],
        },
 
