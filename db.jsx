@@ -5,7 +5,7 @@ export const cards = [
     {
         id: 1,
         title: "card1",
-        imageUrl: "lhttps://images.wallpaperscraft.ru/image/single/vishni_iagody_krasnyj_160567_300x168.jpg",
+        imageUrl: "https://images.wallpaperscraft.ru/image/single/vishni_iagody_krasnyj_160567_300x168.jpg",
         description: "описание вкусный завтрак"
 
     },
