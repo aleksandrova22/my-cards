@@ -1,8 +1,7 @@
 
 'use client';
 import { useState } from "react";
-
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { CardItem } from "./cardItem";
 // import { Card } from "@/types/card";
 import { RootState } from "@/redux/store";
@@ -18,7 +17,7 @@ export function CardList() {
     const favorites = useSelector((state: RootState) => state.favorites.items);
 
 
-    // Фильтр : если 'favorites', показываем только избранные, иначе все
+    // Фильтр 
     let updatedData = filter === 'favorites' ? favorites : allCards;
 
     if (searchQuery.trim()) {
@@ -43,18 +42,18 @@ export function CardList() {
             </div>
             <button onClick={() => setFilter('all')} className={`${styles.filterButton} ${filter === 'all' ? styles.active : ''}`} >Все продукты</button>
             <button onClick={() => setFilter('favorites')}>Избранные</button>
+            <div className={styles.cardsContainer}>
+                {
+                    updatedData?.length > 0 ? (
+                        updatedData?.map((elem) =>
+                            <CardItem key={elem.id} card={elem} />)
 
-            {
-                updatedData?.length > 0 ? (
-                    updatedData?.map((elem) =>
-                        <CardItem key={elem.id} card={elem} />)
+                    ) : (
+                        <p>Продукты для отображения отсутствуют</p>
+                    )
 
-                ) : (
-                    <p>Продукты для отображения отсутствуют</p>
-                )
-
-            }
-
+                }
+            </div>
         </div>
     </>;
 };

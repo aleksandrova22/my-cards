@@ -44,15 +44,17 @@ export function CardItem({ card }: { card: Card }) {
         router.push(`/products/${card.id}`);
     };
 
-    return (
+    return <>
         <div className={styles.card} onClick={handleCardClick}>
             <div className={styles.content}>
                 <Fetcher url={card.imageUrl} />
                 <div className={styles.but} onClick={(e) => e.stopPropagation()}>
-                    <div className={styles.icon} onClick={handleHeartClick}><div className={`${styles.heart} ${isFavorite ? styles.heartFilled : ''}`} > </div></div>
-                    <div className={styles.icon} onClick={handleRemoveClick}> ❌ </div>
+                    <div className={styles.icon} onClick={handleHeartClick}>
+                        <div className={`${styles.heart} ${isFavorite ? styles.heartFilled : ''}`}></div>
+                    </div>
+                    <div className={styles.icon} onClick={handleRemoveClick}>❌</div>
                 </div>
             </div>
         </div>
-    );
+    </>;
 }
